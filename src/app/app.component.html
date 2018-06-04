@@ -1,20 +1,107 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <!-- HEADER -->
+  <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+    <div class="mdl-layout__header-row">
+      <span class="android-title mdl-layout-title">
+        <img class="android-logo-image" src="../assets/images/wetravellogo.jpg" routerLink="/home">
+      </span>
+      <!-- Add spacer, to align navigation to the right in desktop -->
+      <div class="android-header-spacer mdl-layout-spacer"></div>
+      <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+        <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" id="search-field">
+        </div>
+      </div>
+      <!-- Navigation -->
+      <div class="android-navigation-container">
+        <nav class="android-navigation mdl-navigation">
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Khách sạn</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Phương tiện</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Khuyến mãi</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Gợi ý</a>
+        </nav>
+      </div>
+      <span class="android-mobile-title mdl-layout-title">
+        <img class="android-logo-image" src="../assets/images/android-logo.png">
+      </span>
+      <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+        <i class="material-icons">more_vert</i>
+      </button>
+      <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+        <li class="mdl-menu__item">Sign in</li>
+        <li class="mdl-menu__item">Sign up</li>
+        <li disabled class="mdl-menu__item">Acount</li>
+        <hr>
+        <li class="mdl-menu__item">About us & Contact</li>
+      </ul>
+    </div>
+  </div>
+  <!-- HEADER -->
 
+  <!-- HAMBURGER MENU -->
+  <div class="android-drawer mdl-layout__drawer">
+    <span class="mdl-layout-title">
+      <h3 class="android-logo-image">WE TRAVEL</h3>
+    </span>
+    <app-nav></app-nav>
+  </div>
+  <!-- HAMBURGER MENU -->
+
+  <!-- CONTENT -->
+  <div class="android-content mdl-layout__content">
+    <a name="top"></a>
+    <router-outlet></router-outlet>
+    <!-- CONTENT -->
+
+    <!-- FOOTER -->
+    <footer class="android-footer mdl-mega-footer">
+      <div class="mdl-mega-footer--top-section">
+        <div class="mdl-mega-footer--left-section">
+          <button class="mdl-mega-footer--social-btn"></button>
+          &nbsp;
+          <button class="mdl-mega-footer--social-btn"></button>
+          &nbsp;
+          <button class="mdl-mega-footer--social-btn"></button>
+        </div>
+      </div>
+
+      <div class="mdl-mega-footer--middle-section">
+        <p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
+        <p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
+      </div>
+
+      <div class="mdl-mega-footer--bottom-section">
+        <a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
+          Versions
+          <i class="material-icons">arrow_drop_up</i>
+        </a>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
+          <li class="mdl-menu__item">Sign in</li>
+          <li class="mdl-menu__item">Sign up</li>
+          <hr>
+          <li class="mdl-menu__item">About us</li>
+          <li class="mdl-menu__item">Contact</li>
+        </ul>
+        <a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
+          For Developers
+          <i class="material-icons">arrow_drop_up</i>
+        </a>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
+          <li class="mdl-menu__item">App developer resources</li>
+          <li class="mdl-menu__item">Android Open Source Project</li>
+          <li class="mdl-menu__item">Android SDK</li>
+          <li class="mdl-menu__item">Android for Work</li>
+        </ul>
+        <a class="android-link mdl-typography--font-light" href="">Blog</a>
+        <a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
+      </div>
+
+    </footer>
+    <!-- FOOTER -->
+  </div>
+</div>
+<a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/android-dot-com/" target="_blank" id="view-source"
+  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Book now</a>

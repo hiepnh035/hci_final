@@ -1,0 +1,19 @@
+.android-drawer {
+  border-right: none;
+}
+
+  .android-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 0px 0;
+  }
+
+  .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+  }
+
+  span.mdl-navigation__link.mdl-navigation__link {
+    color: rgb(31, 195, 224);
+  }
+
